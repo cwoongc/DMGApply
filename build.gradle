@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        mavenLocal() //gradle maven 플러그인의 install 태스크로 커스텀 플러그인을 메이븐 로컬 리파지토리에 등록하면 커스텀 플러그인을  이렇게 로딩할 할 수 있다.
+        jcenter()
+    }
+    dependencies {
+        classpath "cwoongc:DomainModuleGenerator:1.+"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'cwoongc.DMG'
+
+DMG {
+    domainModuleRootPackage 'com.cwoongc.product.registration'
+}
+
+
+
+
+repositories {
+    jcenter()
+}
+
