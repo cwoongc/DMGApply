@@ -13,12 +13,17 @@ apply plugin: 'cwoongc.DMG'
 
 DMG {
     domainModuleRootPackage 'com.cwoongc.product.registration'
-    roleModuleNames.clear()
-    roleModuleNames << "controller" << "interceptor"
-    resourcesRoleModuleNames.clear()
-    testRoleModuleNames.clear()
-    testRoleModuleNames << "contoller"
-    testResourcesRoleModuleNames.clear()
+//    roleModuleNames.clear()
+//    roleModuleNames << "controller" << "interceptor"
+//    resourcesRoleModuleNames.clear()
+//    testRoleModuleNames.clear()
+//    testRoleModuleNames << "contoller"
+//    testResourcesRoleModuleNames.clear()
+    baseException 'TerroirException'
+    exceptionImports '''import com.elevenst.exception.ExceptionEnumTypes;
+import com.elevenst.exception.TerroirException;'''
+
+
 }
 
 
